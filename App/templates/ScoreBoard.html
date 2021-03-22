@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Score board</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+
+{% block content %}
+    <div class="row card-group">
+    {% for team in teams %}
+        {% if team.0 != 'None' %}
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ team.0 }}</h3>
+                        <p class="card-text">Size: {{ team.1 }}</p>
+                        <p class="card-text">Goal: {{ team.2 }}</p>
+                        <p class="card-text">Realized: {{ team.3 }}</p>
+                        <a class="btn btn-link" href="/manageTeam/{{ team.4 }}">Manage Team</a>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+{% endblock %}
+</body>
+</html>

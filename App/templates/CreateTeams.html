@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Teams</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <form action="{% url "createTeams" %}" method="post">
+        {% csrf_token %}
+        <div class="row card-group">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Teams 1</h3>
+                        <p class="card-text">Name: {{ form.TeamName }}</p>
+                        <p class="card-text">Size: {{ form.TeamSize }}</p>
+                        <p class="card-text">Goal: {{ form.TeamGoal }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Teams 2</h3>
+                        <p class="card-text">Name: {{ form.TeamName2 }}</p>
+                        <p class="card-text">Size: {{ form.TeamSize2 }}</p>
+                        <p class="card-text">Goal: {{ form.TeamGoal2 }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Teams 3</h3>
+                        <p class="card-text">Name: {{ form.TeamName3 }}</p>
+                        <p class="card-text">Size: {{ form.TeamSize3 }}</p>
+                        <p class="card-text">Goal: {{ form.TeamGoal3 }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Teams 4</h3>
+                        <p class="card-text">Name: {{ form.TeamName4 }}</p>
+                        <p class="card-text">Size: {{ form.TeamSize4 }}</p>
+                        <p class="card-text">Goal: {{ form.TeamGoal4 }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Teams 5</h3>
+                        <p class="card-text">Name: {{ form.TeamName5 }}</p>
+                        <p class="card-text">Size: {{ form.TeamSize5 }}</p>
+                        <p class="card-text">Goal: {{ form.TeamGoal5 }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Teams 6</h3>
+                        <p class="card-text">Name: {{ form.TeamName6 }}</p>
+                        <p class="card-text">Size: {{ form.TeamSize6 }}</p>
+                        <p class="card-text">Goal: {{ form.TeamGoal6 }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Teams 7</h3>
+                        <p class="card-text">Name: {{ form.TeamName7 }}</p>
+                        <p class="card-text">Size: {{ form.TeamSize7 }}</p>
+                        <p class="card-text">Goal: {{ form.TeamGoal7 }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Teams 8</h3>
+                        <p class="card-text">Name: {{ form.TeamName8 }}</p>
+                        <p class="card-text">Size: {{ form.TeamSize8 }}</p>
+                        <p class="card-text">Goal: {{ form.TeamGoal8 }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Submit" />
+    </form>
+{% endblock %}
+</body>
+</html>

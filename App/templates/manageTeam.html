@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Team</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+
+{% block content %}
+    <h1 class="text-center">{{ Name }}</h1>
+    <div>
+        <p>Size = {{ size }}</p>
+        <p>Goal = {{ goal }}</p>
+        <p>Realized = {{ realized }}</p>
+    </div>
+    <form action="{% url "manageTeam" team_id %}" method="post">
+        {% csrf_token %}
+        <input class="btn btn-primary" type="submit" value="Add Realized" />
+    </form>
+    <br/>
+    <a class="btn btn-link" href="/scoreBoard">Return to scoreBoard</a>
+{% endblock %}
+</body>
+</html>
